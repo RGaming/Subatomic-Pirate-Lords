@@ -18,10 +18,10 @@ public class SPL implements ApplicationListener {
 	@Override
 	public void create() {
 		spriteBatch = new SpriteBatch();
-		Texture texture = new Texture(Gdx.files.internal("Arial.png"));
+		Texture texture = new Texture(Gdx.files.internal("Fonts/Arial.png"));
 		texture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
-		shipTexture = new Texture(Gdx.files.internal("Ship.png"));
-		font = new BitmapFont(Gdx.files.internal("Arial.fnt"), new TextureRegion(texture), false);
+		shipTexture = new Texture(Gdx.files.internal("Sprites/Ship.png"));
+		font = new BitmapFont(Gdx.files.internal("Fonts/Arial.fnt"), new TextureRegion(texture), false);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class SPL implements ApplicationListener {
 		spriteBatch.begin();
 		 font.setColor(.75f, 0f, 0f, 1.0f);
 		 font.draw(spriteBatch, "Subatomic Pirate Lords: Genesis", 25, 160);
-		 spriteBatch.draw(shipTexture, 0, 0);
+		 spriteBatch.draw(shipTexture, 50, 0);
 		spriteBatch.end();
 	}
 
